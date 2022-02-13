@@ -39,7 +39,9 @@ h3 {
   margin-top: 0;
   margin-bottom: 0;
 }
-
+img {
+  display: block;
+}
 header {
   background-color: var(--secondary-white-color);
 }
@@ -76,13 +78,28 @@ button:hover {
   padding-left: 15px;
   padding-right: 15px;
 }
-
+/* скрыть заголовок */
+.visually-hidden {
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  border: 0;
+  padding: 0;
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+  margin: -1px;
+}
 /* Шапка сайта */
 .nav {
   display: flex;
   align-items: center;
+  border-bottom: 1px solid #ececec;
 }
-
+.navigation {
+  margin-left: 93px;
+}
 /* Лого */
 .logo {
   color: var(--title-text-color);
@@ -99,7 +116,6 @@ button:hover {
 
 .site-nav {
   display: flex;
-  margin-left: 93px;
 }
 
 .site-nav .item:not(:last-child) {
@@ -156,12 +172,12 @@ button:hover {
 .hero {
   background-color: var(--primary-dark-color);
   text-align: center;
+  padding-top: 200px;
+  padding-bottom: 200px;
 }
 .hero-title {
-  margin-top: 0;
-  margin-bottom: 30px;
-  padding-left: 452px;
-  padding-right: 452px;
+  margin: 0 auto 30px;
+  max-width: 696px;
 
   color: var(--secondary-white-color);
   font-weight: 900;
@@ -181,7 +197,6 @@ button:hover {
   border: 1px solid transparent;
   padding: 10px 32px;
   min-width: 200px;
-  margin-bottom: 200px;
 }
 .hero-button:hover,
 .hero-button:focus {
@@ -271,7 +286,6 @@ button:hover {
   border-radius: 0px 0px 4px 4px;
 
   width: 270px;
-  height: 368px;
   margin: 15px;
 }
 .team-card h3 {
@@ -291,28 +305,29 @@ button:hover {
   text-align: center;
 
   margin-top: 0;
-  margin-bottom: 30px;
 }
-.team-foto {
-  margin-bottom: 30px;
+.team-title {
+  padding-top: 30px;
+  padding-bottom: 30px;
 }
 /* Футер */
 footer {
   background-color: var(--primary-dark-color);
+  padding-top: 60px;
+  padding-bottom: 60px;
 }
 .footer .logo {
   color: var(--secondary-white-color);
 }
 
-.footer .container {
-  padding-top: 60px;
-  padding-bottom: 60px;
+
 }
 .logo-footer {
   display: block;
   margin-bottom: 20px;
 }
 .address {
+  margin-bottom: 9px;
   color: var(--secondary-white-color);
   font-size: 14px;
   font-style: normal;
@@ -320,7 +335,7 @@ footer {
 }
 .address-link {
   display: block;
-  margin-bottom: 9px;
+
   color: var(--address-color);
 
   font-weight: 400;
@@ -340,7 +355,7 @@ footer {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  margin-bottom: 34px;
+  margin-bottom: 50px;
 }
 .filters-button:not(:last-child) {
   margin-right: 8px;
@@ -350,11 +365,10 @@ footer {
   flex-wrap: wrap;
 }
 .portfolio-card {
-  height: 404px;
+ 
   width: 370px;
   background: #ffffff;
-  border: 1px solid #eeeeee;
-  box-sizing: border-box;
+
 }
 
 .portfolio-card:not(:nth-child(3n)) {
@@ -367,8 +381,13 @@ footer {
   display: block;
   text-decoration: none;
 }
-.portfolio-foto {
-  margin-bottom: 20px;
+
+.portfolio-link-container {
+padding: 20px 24px;
+border-left: 1px solid #eeeeee;
+border-bottom: 1px solid #eeeeee;
+border-right: 1px solid #eeeeee;
+
 }
 .portfolio-title {
   color: var(--title-text-color);
@@ -387,8 +406,4 @@ footer {
 
   margin: 0;
 }
-.portfolio-link-container {
-  width: 322px;
-  height: 70px;
-  margin: 0 24px 20px;
-}
+
